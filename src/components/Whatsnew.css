@@ -1,0 +1,138 @@
+/* Ensure carousel controls are visible on hover */
+.hover-controls .carousel-control-prev,
+.hover-controls .carousel-control-next {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-controls:hover .carousel-control-prev,
+.hover-controls:hover .carousel-control-next {
+  opacity: 1;
+}
+
+.hover-controls .carousel-control-prev-icon,
+.hover-controls .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Custom class to force gap between cards in the carousel slide */
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px !important;
+  justify-content: center;
+}
+
+/**** Toggle Switch Styling (Original) ****/
+.toggle-links-container {
+  display: inline-flex;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.toggle-link {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-family: "Instrument Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.toggle-link.active {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/**** Container & Layout Adjustments ****/
+.whatsnew-container {
+  max-width: 1400px;
+}
+
+/**** Product Card Styling ****/
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 307px;
+  height: 410px;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+/**** Image Container & Hover Effects ****/
+.image-container {
+  width: 100%;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/**** Hover Buttons ****/
+.hover-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.product-card:hover .hover-buttons {
+  opacity: 1;
+}
+
+.hover-btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  font-weight: 600;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.hover-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/**** Card Title ****/
+.card-title {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}

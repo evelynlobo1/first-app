@@ -1,0 +1,29 @@
+/* Ensure the carousel images fill the width */
+.hero-image {
+  object-fit: cover;   /* Ensures the image covers the container nicely */
+  max-height: 600px;   /* Adjust as needed for your design */
+}
+
+/* Positioning and styling for the overlay text */
+.custom-caption {
+  position: absolute;
+  top: 50%;          /* Vertical center; change to e.g. 20% if you want it near the top */
+  left: 10%;         /* Move text away from the left edge */
+  transform: translateY(-50%);
+  text-align: left;  /* Align text to the left */
+  color: #fff;       /* Ensure text is visible on top of the image */
+  width: 40%;        /* Limit width so text doesn't span too far */
+}
+
+.caption-bg {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.custom-caption h2,
+.custom-caption p {
+  margin: 0 0 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Optional text shadow for readability */
+  color: #fff;    
+}

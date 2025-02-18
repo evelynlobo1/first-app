@@ -1,0 +1,109 @@
+/* Navbar container height */
+.custom-navbar .container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;  
+    box-sizing: border-box;
+  }
+  
+  .custom-navbar {
+    background-color: #f8f3f0 !important;
+    position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+  /* Change background color when scrolled */
+.custom-navbar.scrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+  /* Remove default list styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between items */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  /* Add margin to the first nav item */
+.nav-links li:first-child {
+  margin-left: 15vw; /* Adjust this value as needed */
+}
+  
+  /* Styling for navbar links */
+  .nav-links li a {
+    font-size: 14px;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 700;
+    color: #1F1F1F;
+    text-decoration: none;
+    position: relative;
+    padding: 0.2em 0;
+    transition: color 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Underline effect */
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1F1F1F;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;  /* Initially hidden */
+  }
+  
+  /* Hover effect: Slide the underline in */
+  .nav-links li a:hover::after,
+  .nav-links li a:focus::after {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;  /* Make it visible */
+  }
+  
+  
+  /* Ensure nav-links take up all available space */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between items */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-grow: 1; /* Allows items to spread */
+  }
+  
+  /* Move search icon to the right */
+  .search-icon {
+    margin-left: auto; /* Push it to the right */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styling for the search icon */
+  .search-icon a {
+    font-size: 20px;
+    color: #1F1F1F;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .search-icon a:hover {
+    color: #777; /* Slightly lighter color on hover */
+  }
+  

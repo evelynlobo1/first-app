@@ -1,0 +1,25 @@
+.service-features {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+  }
+  
+  .feature-item {
+    padding: 20px;
+  }
+  
+  .icon {
+    font-size: 40px;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  
+  h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #666;
+  }
+  
