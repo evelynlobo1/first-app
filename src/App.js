@@ -6,29 +6,31 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
-import MainNavbar from './components/Navbar';
-import HeroCarousel from './components/Herosection';
-import Categories from "./components/Categories";
-import WhatsNewSection from "./components/Whatsnew";
-import ZoomImageComponent from "./components/Box";
-import Bestseller from './components/Bestseller';
-import ServiceFeatures from './components/Servicefeatures';
-import Footer from './components/Footer';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 
 function App() {
   
   return (
-    <div>
-      <MainNavbar />
-      <HeroCarousel />
-      <Categories />
-      <WhatsNewSection />
-      <ZoomImageComponent/>
-      <Bestseller />
-      <ServiceFeatures/>
-      <Footer />
-    </div>
+    <>
+    <Router>
+      <Routes>
+      
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} /> 
+          {/* <Route path="/Shop" element ={<Shop/>} /> */}
+        
+          <Route path="about" element={<About />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+        </Route>
+      </Routes>
+      </Router>
+      
+    </>
   );
 }
 
